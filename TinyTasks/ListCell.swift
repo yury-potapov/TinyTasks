@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ListCell: View {
+    @Binding private(set) var list: TaskList
     @Environment(\.editMode) private var editMode
-    @Binding var list: TaskList
 
     var body: some View {
         ZStack {

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TaskListView: View {
-    @Binding var taskList: TaskList
+    @Binding private(set) var taskList: TaskList
     @State private var updatedTasks: [Task] = []
 
     var body: some View {

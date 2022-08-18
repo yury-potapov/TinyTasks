@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct TaskCell: View {
+    @Binding private(set) var task: Task
     @Environment(\.editMode) private var editMode
-    @Binding var task: Task
 
     private static let feedbackGenerator = UINotificationFeedbackGenerator()
 

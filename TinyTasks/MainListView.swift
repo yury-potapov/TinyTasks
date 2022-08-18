@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainListView: View {
-    @AppStorage("task_lists") var lists = ListsStorage()
+    @AppStorage("task_lists") private var lists = ListsStorage()
 
     var body: some View {
         NavigationView {
