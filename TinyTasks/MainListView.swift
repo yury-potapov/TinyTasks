@@ -13,8 +13,8 @@ struct MainListView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(Array(lists.indices), id: \.self) { index in
-                    ListCell(list: $lists[index])
+                ForEach($lists) { list in
+                    ListCell(list: list)
                 }
                 .onDelete(perform: deleteLists)
                 .onMove(perform: moveLists)

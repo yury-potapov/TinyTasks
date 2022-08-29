@@ -13,8 +13,8 @@ struct TaskListView: View {
 
     var body: some View {
         List {
-            ForEach(Array(updatedTasks.indices), id: \.self) { index in
-                TaskCell(task: $updatedTasks[index])
+            ForEach($updatedTasks) { task in
+                TaskCell(task: task)
             }
             .onDelete(perform: deleteTasks)
             .onMove(perform: moveTasks)
